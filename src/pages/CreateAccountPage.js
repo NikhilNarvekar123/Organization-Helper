@@ -1,8 +1,8 @@
-
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 
-const ProfilePage = () => {
+const CreateAccountPage = () => {
 
     return(
         <>
@@ -35,9 +35,11 @@ const ProfilePage = () => {
             <input id="password" type="password" name="password" placeholder="********" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
             <label for="password-confirm" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Confirm password</label>
             <input id="password-confirm" type="password" name="password-confirm" placeholder="********" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-            <button type="submit" class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
-                Complete Profile
-            </button>
+            <NavLink to='/home'>
+                <button type="submit" class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
+                    Complete Profile
+                </button>
+            </NavLink>
             <p class="flex justify-between inline-block mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">Already registered?</p>
             </form>
         </div>
@@ -46,6 +48,7 @@ const ProfilePage = () => {
         </>
     );
 
+
 }
 
-export default ProfilePage;
+export default CreateAccountPage;
